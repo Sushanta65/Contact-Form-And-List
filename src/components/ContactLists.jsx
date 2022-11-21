@@ -24,7 +24,7 @@ const ContactLists = ({ contacts }) => {
   }
 
   return (
-    <div>
+    <div><br />
       <div>
         Filter:
         <input
@@ -62,10 +62,11 @@ const ContactLists = ({ contacts }) => {
           value={searchTerm}
           onChange={handleSearchTermValue}
           type="search"
-          placeholder="Search"
+          placeholder="Search Contact"
         />
-      </div>
-      {contacts.length > 0 && (
+      </div><br />
+      {contacts.length > 0 && <h3>There are {contacts.length} contact list.</h3>}
+      {contacts.length > 0? (
         <table border={2} cellPadding={2} cellSpacing={3}>
           <thead>
             <tr>
@@ -86,7 +87,7 @@ const ContactLists = ({ contacts }) => {
             })}
           </tbody>
         </table>
-      )}
+      ): (<p>You don't have any contact list right now. <br /> Please add a contact.</p>)}
     </div>
   );
 };

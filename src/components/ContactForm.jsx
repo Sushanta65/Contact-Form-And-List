@@ -32,18 +32,18 @@ const ContactForm = ({ getContact }) => {
             required
             value={name}
             onChange={handleChange}
-            type="text"
+            type="name"
             name="name"
-            placeholder="Email"
+            placeholder="Name"
           />
         </div>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Email:</label>
           <input
             required
             value={email}
             onChange={handleChange}
-            type="text"
+            type="email"
             name="email"
             placeholder="Email"
           />
